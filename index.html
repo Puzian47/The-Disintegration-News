@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Disintegration News</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.8.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.8.0/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+    <button id="startButton">
+        <span>The</span>
+        <span>Disintegration</span>
+        <span>News</span>
+
+        <span></span>
+    </button>
+    
+
+    <audio id="myAudio" preload="auto" style="display:none">
+        <source src="bomb4.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div id="rss-feed" style="display:none"></div>
+    <link id="stylesheetLink" rel="stylesheet" href="styles.css" style="display:none">
+    <script id="script1" src="script.js" style="display:none"></script>
+    <script id="script2" src="sketch.js" style="display:none"></script>
+
+    <script>
+        document.getElementById('startButton').addEventListener('click', function() {
+            // Show hidden elements
+            document.getElementById('myAudio').style.display = 'block';
+            document.getElementById('rss-feed').style.display = 'block';
+            document.getElementById('stylesheetLink').style.display = 'block';
+            document.getElementById('script1').style.display = 'block';
+            document.getElementById('script2').style.display = 'block';
+
+            // Remove the button after it's clicked
+            this.remove();
+        });
+    </script>
+</body>
+</html>
